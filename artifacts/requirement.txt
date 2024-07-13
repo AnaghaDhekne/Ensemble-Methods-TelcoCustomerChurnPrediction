@@ -1,0 +1,10 @@
+packages install for python
+- pandas
+- numpy
+- flask
+- matplotlib
+- flask_bootstrap
+- plotly
+- sklearn
+- imblearn
+- joblib
