@@ -1,0 +1,546 @@
+The shape of dataset is: (7043, 51)
+
+
+The columns of dataset are: 
+Index(['Latitude', 'Longitude', 'Tenure Months', 'Monthly Charges',
+       'Total Charges', 'Churn Value', 'Score', 'CLTV',
+       'Contract_Month-to-month', 'Contract_One year', 'Contract_Two year',
+       'Payment Method_Bank transfer (automatic)',
+       'Payment Method_Credit card (automatic)',
+       'Payment Method_Electronic check', 'Payment Method_Mailed check',
+       'Gender_Female', 'Gender_Male', 'Internet Service_DSL',
+       'Internet Service_Fiber optic', 'Internet Service_No',
+       'Multiple Lines_No', 'Multiple Lines_No phone service',
+       'Multiple Lines_Yes', 'Online Security_No',
+       'Online Security_No internet service', 'Online Security_Yes',
+       'Online Backup_No', 'Online Backup_No internet service',
+       'Online Backup_Yes', 'Device Protection_No',
+       'Device Protection_No internet service', 'Device Protection_Yes',
+       'Tech Support_No', 'Tech Support_No internet service',
+       'Tech Support_Yes', 'Streaming TV_No',
+       'Streaming TV_No internet service', 'Streaming TV_Yes',
+       'Streaming Movies_No', 'Streaming Movies_No internet service',
+       'Streaming Movies_Yes', 'Partner_No', 'Partner_Yes', 'Dependents_No',
+       'Dependents_Yes', 'Senior Citizen_No', 'Senior Citizen_Yes',
+       'Paperless Billing_No', 'Paperless Billing_Yes', 'Phone Service_No',
+       'Phone Service_Yes'],
+      dtype='object')
+
+
+The dataset details are: 
+<bound method DataFrame.info of        Latitude   Longitude  Tenure Months  Monthly Charges  Total Charges  \
+0     33.964131 -118.272783              2            53.85         108.15   
+1     34.059281 -118.307420              2            70.70         151.65   
+2     34.048013 -118.293953              8            99.65         820.50   
+3     34.062125 -118.315709             28           104.80        3046.05   
+4     34.039224 -118.266293             49           103.70        5036.30   
+...         ...         ...            ...              ...            ...   
+7038  34.341737 -116.539416             72            21.15        1419.40   
+7039  34.667815 -117.536183             24            84.80        1990.50   
+7040  34.559882 -115.637164             72           103.20        7362.90   
+7041  34.167800 -116.864330             11            29.60         346.45   
+7042  34.424926 -117.184503             66           105.65        6844.50   
+
+      Churn Value  Score  CLTV  Contract_Month-to-month  Contract_One year  \
+0               1     86  3239                        1                  0   
+1               1     67  2701                        1                  0   
+2               1     86  5372                        1                  0   
+3               1     84  5003                        1                  0   
+4               1     89  5340                        1                  0   
+...           ...    ...   ...                      ...                ...   
+7038            0     45  5306                        0                  0   
+7039            0     59  2140                        0                  1   
+7040            0     71  5560                        0                  1   
+7041            0     59  2793                        1                  0   
+7042            0     38  5097                        0                  0   
+
+      Contract_Two year  Payment Method_Bank transfer (automatic)  \
+0                     0                                         0   
+1                     0                                         0   
+2                     0                                         0   
+3                     0                                         0   
+4                     0                                         1   
+...                 ...                                       ...   
+7038                  1                                         1   
+7039                  0                                         0   
+7040                  0                                         0   
+7041                  0                                         0   
+7042                  1                                         1   
+
+      Payment Method_Credit card (automatic)  Payment Method_Electronic check  \
+0                                          0                                0   
+1                                          0                                1   
+2                                          0                                1   
+3                                          0                                1   
+4                                          0                                0   
+...                                      ...                              ...   
+7038                                       0                                0   
+7039                                       0                                0   
+7040                                       1                                0   
+7041                                       0                                1   
+7042                                       0                                0   
+
+      Payment Method_Mailed check  Gender_Female  Gender_Male  \
+0                               1              0            1   
+1                               0              1            0   
+2                               0              1            0   
+3                               0              1            0   
+4                               0              0            1   
+...                           ...            ...          ...   
+7038                            0              1            0   
+7039                            1              0            1   
+7040                            0              1            0   
+7041                            0              1            0   
+7042                            0              0            1   
+
+      Internet Service_DSL  Internet Service_Fiber optic  Internet Service_No  \
+0                        1                             0                    0   
+1                        0                             1                    0   
+2                        0                             1                    0   
+3                        0                             1                    0   
+4                        0                             1                    0   
+...                    ...                           ...                  ...   
+7038                     0                             0                    1   
+7039                     1                             0                    0   
+7040                     0                             1                    0   
+7041                     1                             0                    0   
+7042                     0                             1                    0   
+
+      Multiple Lines_No  Multiple Lines_No phone service  Multiple Lines_Yes  \
+0                     1                                0                   0   
+1                     1                                0                   0   
+2                     0                                0                   1   
+3                     0                                0                   1   
+4                     0                                0                   1   
+...                 ...                              ...                 ...   
+7038                  1                                0                   0   
+7039                  0                                0                   1   
+7040                  0                                0                   1   
+7041                  0                                1                   0   
+7042                  1                                0                   0   
+
+      Online Security_No  Online Security_No internet service  \
+0                      0                                    0   
+1                      1                                    0   
+2                      1                                    0   
+3                      1                                    0   
+4                      1                                    0   
+...                  ...                                  ...   
+7038                   0                                    1   
+7039                   0                                    0   
+7040                   1                                    0   
+7041                   0                                    0   
+7042                   0                                    0   
+
+      Online Security_Yes  Online Backup_No  \
+0                       1                 0   
+1                       0                 1   
+2                       0                 1   
+3                       0                 1   
+4                       0                 0   
+...                   ...               ...   
+7038                    0                 0   
+7039                    1                 1   
+7040                    0                 0   
+7041                    1                 1   
+7042                    1                 1   
+
+      Online Backup_No internet service  Online Backup_Yes  \
+0                                     0                  1   
+1                                     0                  0   
+2                                     0                  0   
+3                                     0                  0   
+4                                     0                  1   
+...                                 ...                ...   
+7038                                  1                  0   
+7039                                  0                  0   
+7040                                  0                  1   
+7041                                  0                  0   
+7042                                  0                  0   
+
+      Device Protection_No  Device Protection_No internet service  \
+0                        1                                      0   
+1                        1                                      0   
+2                        0                                      0   
+3                        0                                      0   
+4                        0                                      0   
+...                    ...                                    ...   
+7038                     0                                      1   
+7039                     0                                      0   
+7040                     0                                      0   
+7041                     1                                      0   
+7042                     0                                      0   
+
+      Device Protection_Yes  Tech Support_No  \
+0                         0                1   
+1                         0                1   
+2                         1                1   
+3                         1                0   
+4                         1                1   
+...                     ...              ...   
+7038                      0                0   
+7039                      1                0   
+7040                      1                1   
+7041                      0                1   
+7042                      1                0   
+
+      Tech Support_No internet service  Tech Support_Yes  Streaming TV_No  \
+0                                    0                 0                1   
+1                                    0                 0                1   
+2                                    0                 0                0   
+3                                    0                 1                0   
+4                                    0                 0                0   
+...                                ...               ...              ...   
+7038                                 1                 0                0   
+7039                                 0                 1                0   
+7040                                 0                 0                0   
+7041                                 0                 0                1   
+7042                                 0                 1                0   
+
+      Streaming TV_No internet service  Streaming TV_Yes  Streaming Movies_No  \
+0                                    0                 0                    1   
+1                                    0                 0                    1   
+2                                    0                 1                    0   
+3                                    0                 1                    0   
+4                                    0                 1                    0   
+...                                ...               ...                  ...   
+7038                                 1                 0                    0   
+7039                                 0                 1                    0   
+7040                                 0                 1                    0   
+7041                                 0                 0                    1   
+7042                                 0                 1                    0   
+
+      Streaming Movies_No internet service  Streaming Movies_Yes  Partner_No  \
+0                                        0                     0           1   
+1                                        0                     0           1   
+2                                        0                     1           1   
+3                                        0                     1           0   
+4                                        0                     1           1   
+...                                    ...                   ...         ...   
+7038                                     1                     0           1   
+7039                                     0                     1           0   
+7040                                     0                     1           0   
+7041                                     0                     0           0   
+7042                                     0                     1           1   
+
+      Partner_Yes  Dependents_No  Dependents_Yes  Senior Citizen_No  \
+0               0              1               0                  1   
+1               0              0               1                  1   
+2               0              0               1                  1   
+3               1              0               1                  1   
+4               0              0               1                  1   
+...           ...            ...             ...                ...   
+7038            0              1               0                  1   
+7039            1              0               1                  1   
+7040            1              0               1                  1   
+7041            1              0               1                  1   
+7042            0              1               0                  1   
+
+      Senior Citizen_Yes  Paperless Billing_No  Paperless Billing_Yes  \
+0                      0                     0                      1   
+1                      0                     0                      1   
+2                      0                     0                      1   
+3                      0                     0                      1   
+4                      0                     0                      1   
+...                  ...                   ...                    ...   
+7038                   0                     0                      1   
+7039                   0                     0                      1   
+7040                   0                     0                      1   
+7041                   0                     0                      1   
+7042                   0                     0                      1   
+
+      Phone Service_No  Phone Service_Yes  
+0                    0                  1  
+1                    0                  1  
+2                    0                  1  
+3                    0                  1  
+4                    0                  1  
+...                ...                ...  
+7038                 0                  1  
+7039                 0                  1  
+7040                 0                  1  
+7041                 1                  0  
+7042                 0                  1  
+
+[7043 rows x 51 columns]>
+
+
+The dataset description is: 
+                                           count         mean          std  \
+Latitude                                  7043.0    36.282441     2.455723   
+Longitude                                 7043.0  -119.798880     2.157889   
+Tenure Months                             7043.0    32.371149    24.559481   
+Monthly Charges                           7043.0    64.761692    30.090047   
+Total Charges                             7043.0  2279.734304  2266.794470   
+Churn Value                               7043.0     0.265370     0.441561   
+Score                                     7043.0    58.699418    21.525131   
+CLTV                                      7043.0  4400.295755  1183.057152   
+Contract_Month-to-month                   7043.0     0.550192     0.497510   
+Contract_One year                         7043.0     0.209144     0.406726   
+Contract_Two year                         7043.0     0.240664     0.427517   
+Payment Method_Bank transfer (automatic)  7043.0     0.219225     0.413751   
+Payment Method_Credit card (automatic)    7043.0     0.216101     0.411613   
+Payment Method_Electronic check           7043.0     0.335794     0.472301   
+Payment Method_Mailed check               7043.0     0.228880     0.420141   
+Gender_Female                             7043.0     0.495244     0.500013   
+Gender_Male                               7043.0     0.504756     0.500013   
+Internet Service_DSL                      7043.0     0.343746     0.474991   
+Internet Service_Fiber optic              7043.0     0.439585     0.496372   
+Internet Service_No                       7043.0     0.216669     0.412004   
+Multiple Lines_No                         7043.0     0.481329     0.499687   
+Multiple Lines_No phone service           7043.0     0.096834     0.295752   
+Multiple Lines_Yes                        7043.0     0.421837     0.493888   
+Online Security_No                        7043.0     0.496663     0.500024   
+Online Security_No internet service       7043.0     0.216669     0.412004   
+Online Security_Yes                       7043.0     0.286668     0.452237   
+Online Backup_No                          7043.0     0.438450     0.496232   
+Online Backup_No internet service         7043.0     0.216669     0.412004   
+Online Backup_Yes                         7043.0     0.344881     0.475363   
+Device Protection_No                      7043.0     0.439443     0.496355   
+Device Protection_No internet service     7043.0     0.216669     0.412004   
+Device Protection_Yes                     7043.0     0.343888     0.475038   
+Tech Support_No                           7043.0     0.493114     0.499988   
+Tech Support_No internet service          7043.0     0.216669     0.412004   
+Tech Support_Yes                          7043.0     0.290217     0.453895   
+Streaming TV_No                           7043.0     0.398978     0.489723   
+Streaming TV_No internet service          7043.0     0.216669     0.412004   
+Streaming TV_Yes                          7043.0     0.384353     0.486477   
+Streaming Movies_No                       7043.0     0.395428     0.488977   
+Streaming Movies_No internet service      7043.0     0.216669     0.412004   
+Streaming Movies_Yes                      7043.0     0.387903     0.487307   
+Partner_No                                7043.0     0.516967     0.499748   
+Partner_Yes                               7043.0     0.483033     0.499748   
+Dependents_No                             7043.0     0.768990     0.421508   
+Dependents_Yes                            7043.0     0.231010     0.421508   
+Senior Citizen_No                         7043.0     0.837853     0.368612   
+Senior Citizen_Yes                        7043.0     0.162147     0.368612   
+Paperless Billing_No                      7043.0     0.407781     0.491457   
+Paperless Billing_Yes                     7043.0     0.592219     0.491457   
+Phone Service_No                          7043.0     0.096834     0.295752   
+Phone Service_Yes                         7043.0     0.903166     0.295752   
+
+                                                  min          25%  \
+Latitude                                    32.555828    34.030915   
+Longitude                                 -124.301372  -121.815412   
+Tenure Months                                0.000000     9.000000   
+Monthly Charges                             18.250000    35.500000   
+Total Charges                                0.000000   398.550000   
+Churn Value                                  0.000000     0.000000   
+Score                                        5.000000    40.000000   
+CLTV                                      2003.000000  3469.000000   
+Contract_Month-to-month                      0.000000     0.000000   
+Contract_One year                            0.000000     0.000000   
+Contract_Two year                            0.000000     0.000000   
+Payment Method_Bank transfer (automatic)     0.000000     0.000000   
+Payment Method_Credit card (automatic)       0.000000     0.000000   
+Payment Method_Electronic check              0.000000     0.000000   
+Payment Method_Mailed check                  0.000000     0.000000   
+Gender_Female                                0.000000     0.000000   
+Gender_Male                                  0.000000     0.000000   
+Internet Service_DSL                         0.000000     0.000000   
+Internet Service_Fiber optic                 0.000000     0.000000   
+Internet Service_No                          0.000000     0.000000   
+Multiple Lines_No                            0.000000     0.000000   
+Multiple Lines_No phone service              0.000000     0.000000   
+Multiple Lines_Yes                           0.000000     0.000000   
+Online Security_No                           0.000000     0.000000   
+Online Security_No internet service          0.000000     0.000000   
+Online Security_Yes                          0.000000     0.000000   
+Online Backup_No                             0.000000     0.000000   
+Online Backup_No internet service            0.000000     0.000000   
+Online Backup_Yes                            0.000000     0.000000   
+Device Protection_No                         0.000000     0.000000   
+Device Protection_No internet service        0.000000     0.000000   
+Device Protection_Yes                        0.000000     0.000000   
+Tech Support_No                              0.000000     0.000000   
+Tech Support_No internet service             0.000000     0.000000   
+Tech Support_Yes                             0.000000     0.000000   
+Streaming TV_No                              0.000000     0.000000   
+Streaming TV_No internet service             0.000000     0.000000   
+Streaming TV_Yes                             0.000000     0.000000   
+Streaming Movies_No                          0.000000     0.000000   
+Streaming Movies_No internet service         0.000000     0.000000   
+Streaming Movies_Yes                         0.000000     0.000000   
+Partner_No                                   0.000000     0.000000   
+Partner_Yes                                  0.000000     0.000000   
+Dependents_No                                0.000000     1.000000   
+Dependents_Yes                               0.000000     0.000000   
+Senior Citizen_No                            0.000000     1.000000   
+Senior Citizen_Yes                           0.000000     0.000000   
+Paperless Billing_No                         0.000000     0.000000   
+Paperless Billing_Yes                        0.000000     0.000000   
+Phone Service_No                             0.000000     0.000000   
+Phone Service_Yes                            0.000000     1.000000   
+
+                                                  50%          75%  \
+Latitude                                    36.391777    38.224869   
+Longitude                                 -119.730885  -118.043237   
+Tenure Months                               29.000000    55.000000   
+Monthly Charges                             70.350000    89.850000   
+Total Charges                             1394.550000  3786.600000   
+Churn Value                                  0.000000     1.000000   
+Score                                       61.000000    75.000000   
+CLTV                                      4527.000000  5380.500000   
+Contract_Month-to-month                      1.000000     1.000000   
+Contract_One year                            0.000000     0.000000   
+Contract_Two year                            0.000000     0.000000   
+Payment Method_Bank transfer (automatic)     0.000000     0.000000   
+Payment Method_Credit card (automatic)       0.000000     0.000000   
+Payment Method_Electronic check              0.000000     1.000000   
+Payment Method_Mailed check                  0.000000     0.000000   
+Gender_Female                                0.000000     1.000000   
+Gender_Male                                  1.000000     1.000000   
+Internet Service_DSL                         0.000000     1.000000   
+Internet Service_Fiber optic                 0.000000     1.000000   
+Internet Service_No                          0.000000     0.000000   
+Multiple Lines_No                            0.000000     1.000000   
+Multiple Lines_No phone service              0.000000     0.000000   
+Multiple Lines_Yes                           0.000000     1.000000   
+Online Security_No                           0.000000     1.000000   
+Online Security_No internet service          0.000000     0.000000   
+Online Security_Yes                          0.000000     1.000000   
+Online Backup_No                             0.000000     1.000000   
+Online Backup_No internet service            0.000000     0.000000   
+Online Backup_Yes                            0.000000     1.000000   
+Device Protection_No                         0.000000     1.000000   
+Device Protection_No internet service        0.000000     0.000000   
+Device Protection_Yes                        0.000000     1.000000   
+Tech Support_No                              0.000000     1.000000   
+Tech Support_No internet service             0.000000     0.000000   
+Tech Support_Yes                             0.000000     1.000000   
+Streaming TV_No                              0.000000     1.000000   
+Streaming TV_No internet service             0.000000     0.000000   
+Streaming TV_Yes                             0.000000     1.000000   
+Streaming Movies_No                          0.000000     1.000000   
+Streaming Movies_No internet service         0.000000     0.000000   
+Streaming Movies_Yes                         0.000000     1.000000   
+Partner_No                                   1.000000     1.000000   
+Partner_Yes                                  0.000000     1.000000   
+Dependents_No                                1.000000     1.000000   
+Dependents_Yes                               0.000000     0.000000   
+Senior Citizen_No                            1.000000     1.000000   
+Senior Citizen_Yes                           0.000000     0.000000   
+Paperless Billing_No                         0.000000     1.000000   
+Paperless Billing_Yes                        1.000000     1.000000   
+Phone Service_No                             0.000000     0.000000   
+Phone Service_Yes                            1.000000     1.000000   
+
+                                                  max  
+Latitude                                    41.962127  
+Longitude                                 -114.192901  
+Tenure Months                               72.000000  
+Monthly Charges                            118.750000  
+Total Charges                             8684.800000  
+Churn Value                                  1.000000  
+Score                                      100.000000  
+CLTV                                      6500.000000  
+Contract_Month-to-month                      1.000000  
+Contract_One year                            1.000000  
+Contract_Two year                            1.000000  
+Payment Method_Bank transfer (automatic)     1.000000  
+Payment Method_Credit card (automatic)       1.000000  
+Payment Method_Electronic check              1.000000  
+Payment Method_Mailed check                  1.000000  
+Gender_Female                                1.000000  
+Gender_Male                                  1.000000  
+Internet Service_DSL                         1.000000  
+Internet Service_Fiber optic                 1.000000  
+Internet Service_No                          1.000000  
+Multiple Lines_No                            1.000000  
+Multiple Lines_No phone service              1.000000  
+Multiple Lines_Yes                           1.000000  
+Online Security_No                           1.000000  
+Online Security_No internet service          1.000000  
+Online Security_Yes                          1.000000  
+Online Backup_No                             1.000000  
+Online Backup_No internet service            1.000000  
+Online Backup_Yes                            1.000000  
+Device Protection_No                         1.000000  
+Device Protection_No internet service        1.000000  
+Device Protection_Yes                        1.000000  
+Tech Support_No                              1.000000  
+Tech Support_No internet service             1.000000  
+Tech Support_Yes                             1.000000  
+Streaming TV_No                              1.000000  
+Streaming TV_No internet service             1.000000  
+Streaming TV_Yes                             1.000000  
+Streaming Movies_No                          1.000000  
+Streaming Movies_No internet service         1.000000  
+Streaming Movies_Yes                         1.000000  
+Partner_No                                   1.000000  
+Partner_Yes                                  1.000000  
+Dependents_No                                1.000000  
+Dependents_Yes                               1.000000  
+Senior Citizen_No                            1.000000  
+Senior Citizen_Yes                           1.000000  
+Paperless Billing_No                         1.000000  
+Paperless Billing_Yes                        1.000000  
+Phone Service_No                             1.000000  
+Phone Service_Yes                            1.000000  
+
+
+The numerical columns are: 
+['Latitude', 'Longitude', 'Tenure Months', 'Monthly Charges', 'Total Charges', 'Churn Value', 'Score', 'CLTV', 'Contract_Month-to-month', 'Contract_One year', 'Contract_Two year', 'Payment Method_Bank transfer (automatic)', 'Payment Method_Credit card (automatic)', 'Payment Method_Electronic check', 'Payment Method_Mailed check', 'Gender_Female', 'Gender_Male', 'Internet Service_DSL', 'Internet Service_Fiber optic', 'Internet Service_No', 'Multiple Lines_No', 'Multiple Lines_No phone service', 'Multiple Lines_Yes', 'Online Security_No', 'Online Security_No internet service', 'Online Security_Yes', 'Online Backup_No', 'Online Backup_No internet service', 'Online Backup_Yes', 'Device Protection_No', 'Device Protection_No internet service', 'Device Protection_Yes', 'Tech Support_No', 'Tech Support_No internet service', 'Tech Support_Yes', 'Streaming TV_No', 'Streaming TV_No internet service', 'Streaming TV_Yes', 'Streaming Movies_No', 'Streaming Movies_No internet service', 'Streaming Movies_Yes', 'Partner_No', 'Partner_Yes', 'Dependents_No', 'Dependents_Yes', 'Senior Citizen_No', 'Senior Citizen_Yes', 'Paperless Billing_No', 'Paperless Billing_Yes', 'Phone Service_No', 'Phone Service_Yes']
+
+
+The categorical Columns are: 
+[]
+
+
+The unique values in categorical columns are: 
+[]
+
+
+The number of missing values in dataset are: 
+Latitude                                    0
+Longitude                                   0
+Tenure Months                               0
+Monthly Charges                             0
+Total Charges                               0
+Churn Value                                 0
+Score                                       0
+CLTV                                        0
+Contract_Month-to-month                     0
+Contract_One year                           0
+Contract_Two year                           0
+Payment Method_Bank transfer (automatic)    0
+Payment Method_Credit card (automatic)      0
+Payment Method_Electronic check             0
+Payment Method_Mailed check                 0
+Gender_Female                               0
+Gender_Male                                 0
+Internet Service_DSL                        0
+Internet Service_Fiber optic                0
+Internet Service_No                         0
+Multiple Lines_No                           0
+Multiple Lines_No phone service             0
+Multiple Lines_Yes                          0
+Online Security_No                          0
+Online Security_No internet service         0
+Online Security_Yes                         0
+Online Backup_No                            0
+Online Backup_No internet service           0
+Online Backup_Yes                           0
+Device Protection_No                        0
+Device Protection_No internet service       0
+Device Protection_Yes                       0
+Tech Support_No                             0
+Tech Support_No internet service            0
+Tech Support_Yes                            0
+Streaming TV_No                             0
+Streaming TV_No internet service            0
+Streaming TV_Yes                            0
+Streaming Movies_No                         0
+Streaming Movies_No internet service        0
+Streaming Movies_Yes                        0
+Partner_No                                  0
+Partner_Yes                                 0
+Dependents_No                               0
+Dependents_Yes                              0
+Senior Citizen_No                           0
+Senior Citizen_Yes                          0
+Paperless Billing_No                        0
+Paperless Billing_Yes                       0
+Phone Service_No                            0
+Phone Service_Yes                           0
+dtype: int64

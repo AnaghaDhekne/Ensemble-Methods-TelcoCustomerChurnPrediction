@@ -1,0 +1,194 @@
+The shape of dataset is: (7043, 33)
+
+
+The columns of dataset are: 
+Index(['CustomerID', 'Count', 'Country', 'State', 'City', 'Zip Code',
+       'Lat Long', 'Latitude', 'Longitude', 'Gender', 'Senior Citizen',
+       'Partner', 'Dependents', 'Tenure Months', 'Phone Service',
+       'Multiple Lines', 'Internet Service', 'Online Security',
+       'Online Backup', 'Device Protection', 'Tech Support', 'Streaming TV',
+       'Streaming Movies', 'Contract', 'Paperless Billing', 'Payment Method',
+       'Monthly Charges', 'Total Charges', 'Churn Label', 'Churn Value',
+       'Score', 'CLTV', 'Churn Reason'],
+      dtype='object')
+
+
+The dataset details are: 
+<bound method DataFrame.info of       CustomerID  Count        Country       State          City  Zip Code  \
+0     3668-QPYBK      1  United States  California   Los Angeles     90003   
+1     9237-HQITU      1  United States  California   Los Angeles     90005   
+2     9305-CDSKC      1  United States  California   Los Angeles     90006   
+3     7892-POOKP      1  United States  California   Los Angeles     90010   
+4     0280-XJGEX      1  United States  California   Los Angeles     90015   
+...          ...    ...            ...         ...           ...       ...   
+7038  2569-WGERO      1  United States  California       Landers     92285   
+7039  6840-RESVB      1  United States  California      Adelanto     92301   
+7040  2234-XADUH      1  United States  California         Amboy     92304   
+7041  4801-JZAZL      1  United States  California  Angelus Oaks     92305   
+7042  3186-AJIEK      1  United States  California  Apple Valley     92308   
+
+                    Lat Long   Latitude   Longitude  Gender Senior Citizen  \
+0     33.964131, -118.272783  33.964131 -118.272783    Male             No   
+1      34.059281, -118.30742  34.059281 -118.307420  Female             No   
+2     34.048013, -118.293953  34.048013 -118.293953  Female             No   
+3     34.062125, -118.315709  34.062125 -118.315709  Female             No   
+4     34.039224, -118.266293  34.039224 -118.266293    Male             No   
+...                      ...        ...         ...     ...            ...   
+7038  34.341737, -116.539416  34.341737 -116.539416  Female             No   
+7039  34.667815, -117.536183  34.667815 -117.536183    Male             No   
+7040  34.559882, -115.637164  34.559882 -115.637164  Female             No   
+7041     34.1678, -116.86433  34.167800 -116.864330  Female             No   
+7042  34.424926, -117.184503  34.424926 -117.184503    Male             No   
+
+     Partner Dependents  Tenure Months Phone Service    Multiple Lines  \
+0         No         No              2           Yes                No   
+1         No        Yes              2           Yes                No   
+2         No        Yes              8           Yes               Yes   
+3        Yes        Yes             28           Yes               Yes   
+4         No        Yes             49           Yes               Yes   
+...      ...        ...            ...           ...               ...   
+7038      No         No             72           Yes                No   
+7039     Yes        Yes             24           Yes               Yes   
+7040     Yes        Yes             72           Yes               Yes   
+7041     Yes        Yes             11            No  No phone service   
+7042      No         No             66           Yes                No   
+
+     Internet Service      Online Security        Online Backup  \
+0                 DSL                  Yes                  Yes   
+1         Fiber optic                   No                   No   
+2         Fiber optic                   No                   No   
+3         Fiber optic                   No                   No   
+4         Fiber optic                   No                  Yes   
+...               ...                  ...                  ...   
+7038               No  No internet service  No internet service   
+7039              DSL                  Yes                   No   
+7040      Fiber optic                   No                  Yes   
+7041              DSL                  Yes                   No   
+7042      Fiber optic                  Yes                   No   
+
+        Device Protection         Tech Support         Streaming TV  \
+0                      No                   No                   No   
+1                      No                   No                   No   
+2                     Yes                   No                  Yes   
+3                     Yes                  Yes                  Yes   
+4                     Yes                   No                  Yes   
+...                   ...                  ...                  ...   
+7038  No internet service  No internet service  No internet service   
+7039                  Yes                  Yes                  Yes   
+7040                  Yes                   No                  Yes   
+7041                   No                   No                   No   
+7042                  Yes                  Yes                  Yes   
+
+         Streaming Movies        Contract Paperless Billing  \
+0                      No  Month-to-month               Yes   
+1                      No  Month-to-month               Yes   
+2                     Yes  Month-to-month               Yes   
+3                     Yes  Month-to-month               Yes   
+4                     Yes  Month-to-month               Yes   
+...                   ...             ...               ...   
+7038  No internet service        Two year               Yes   
+7039                  Yes        One year               Yes   
+7040                  Yes        One year               Yes   
+7041                   No  Month-to-month               Yes   
+7042                  Yes        Two year               Yes   
+
+                 Payment Method  Monthly Charges Total Charges Churn Label  \
+0                  Mailed check            53.85        108.15         Yes   
+1              Electronic check            70.70        151.65         Yes   
+2              Electronic check            99.65         820.5         Yes   
+3              Electronic check           104.80       3046.05         Yes   
+4     Bank transfer (automatic)           103.70        5036.3         Yes   
+...                         ...              ...           ...         ...   
+7038  Bank transfer (automatic)            21.15        1419.4          No   
+7039               Mailed check            84.80        1990.5          No   
+7040    Credit card (automatic)           103.20        7362.9          No   
+7041           Electronic check            29.60        346.45          No   
+7042  Bank transfer (automatic)           105.65        6844.5          No   
+
+      Churn Value  Score  CLTV                   Churn Reason  
+0               1     86  3239   Competitor made better offer  
+1               1     67  2701                          Moved  
+2               1     86  5372                          Moved  
+3               1     84  5003                          Moved  
+4               1     89  5340  Competitor had better devices  
+...           ...    ...   ...                            ...  
+7038            0     45  5306                            NaN  
+7039            0     59  2140                            NaN  
+7040            0     71  5560                            NaN  
+7041            0     59  2793                            NaN  
+7042            0     38  5097                            NaN  
+
+[7043 rows x 33 columns]>
+
+
+The dataset description is: 
+                  count          mean          std           min  \
+Count            7043.0      1.000000     0.000000      1.000000   
+Zip Code         7043.0  93521.964646  1865.794555  90001.000000   
+Latitude         7043.0     36.282441     2.455723     32.555828   
+Longitude        7043.0   -119.798880     2.157889   -124.301372   
+Tenure Months    7043.0     32.371149    24.559481      0.000000   
+Monthly Charges  7043.0     64.761692    30.090047     18.250000   
+Churn Value      7043.0      0.265370     0.441561      0.000000   
+Score            7043.0     58.699418    21.525131      5.000000   
+CLTV             7043.0   4400.295755  1183.057152   2003.000000   
+
+                          25%           50%           75%           max  
+Count                1.000000      1.000000      1.000000      1.000000  
+Zip Code         92102.000000  93552.000000  95351.000000  96161.000000  
+Latitude            34.030915     36.391777     38.224869     41.962127  
+Longitude         -121.815412   -119.730885   -118.043237   -114.192901  
+Tenure Months        9.000000     29.000000     55.000000     72.000000  
+Monthly Charges     35.500000     70.350000     89.850000    118.750000  
+Churn Value          0.000000      0.000000      1.000000      1.000000  
+Score               40.000000     61.000000     75.000000    100.000000  
+CLTV              3469.000000   4527.000000   5380.500000   6500.000000  
+
+
+The numerical columns are: 
+['Count', 'Zip Code', 'Latitude', 'Longitude', 'Tenure Months', 'Monthly Charges', 'Churn Value', 'Score', 'CLTV']
+
+
+The categorical Columns are: 
+['CustomerID', 'Country', 'State', 'City', 'Lat Long', 'Gender', 'Senior Citizen', 'Partner', 'Dependents', 'Phone Service', 'Multiple Lines', 'Internet Service', 'Online Security', 'Online Backup', 'Device Protection', 'Tech Support', 'Streaming TV', 'Streaming Movies', 'Contract', 'Paperless Billing', 'Payment Method', 'Total Charges', 'Churn Label', 'Churn Reason']
+
+
+The unique values in categorical columns are: 
+["CustomerID: ['3668-QPYBK' '9237-HQITU' '9305-CDSKC' ... '2234-XADUH' '4801-JZAZL'\n '3186-AJIEK']", "Country: ['United States']", "State: ['California']", "City: ['Los Angeles' 'Beverly Hills' 'Huntington Park' ... 'Standish' 'Tulelake'\n 'Olympic Valley']", "Lat Long: ['33.964131, -118.272783' '34.059281, -118.30742' '34.048013, -118.293953'\n ... '40.346634, -120.386422' '41.813521, -121.492666'\n '39.191797, -120.212401']", "Gender: ['Male' 'Female']", "Senior Citizen: ['No' 'Yes']", "Partner: ['No' 'Yes']", "Dependents: ['No' 'Yes']", "Phone Service: ['Yes' 'No']", "Multiple Lines: ['No' 'Yes' 'No phone service']", "Internet Service: ['DSL' 'Fiber optic' 'No']", "Online Security: ['Yes' 'No' 'No internet service']", "Online Backup: ['Yes' 'No' 'No internet service']", "Device Protection: ['No' 'Yes' 'No internet service']", "Tech Support: ['No' 'Yes' 'No internet service']", "Streaming TV: ['No' 'Yes' 'No internet service']", "Streaming Movies: ['No' 'Yes' 'No internet service']", "Contract: ['Month-to-month' 'Two year' 'One year']", "Paperless Billing: ['Yes' 'No']", "Payment Method: ['Mailed check' 'Electronic check' 'Bank transfer (automatic)'\n 'Credit card (automatic)']", "Total Charges: ['108.15' '151.65' '820.5' ... '7362.9' '346.45' '6844.5']", "Churn Label: ['Yes' 'No']", 'Churn Reason: [\'Competitor made better offer\' \'Moved\' \'Competitor had better devices\'\n \'Competitor offered higher download speeds\'\n \'Competitor offered more data\' \'Price too high\' \'Product dissatisfaction\'\n \'Service dissatisfaction\' \'Lack of self-service on Website\'\n \'Network reliability\' \'Limited range of services\'\n \'Lack of affordable download/upload speed\' \'Long distance charges\'\n \'Extra data charges\' "Don\'t know" \'Poor expertise of online support\'\n \'Poor expertise of phone support\' \'Attitude of service provider\'\n \'Attitude of support person\' \'Deceased\' nan]']
+
+
+The number of missing values in dataset are: 
+CustomerID              0
+Count                   0
+Country                 0
+State                   0
+City                    0
+Zip Code                0
+Lat Long                0
+Latitude                0
+Longitude               0
+Gender                  0
+Senior Citizen          0
+Partner                 0
+Dependents              0
+Tenure Months           0
+Phone Service           0
+Multiple Lines          0
+Internet Service        0
+Online Security         0
+Online Backup           0
+Device Protection       0
+Tech Support            0
+Streaming TV            0
+Streaming Movies        0
+Contract                0
+Paperless Billing       0
+Payment Method          0
+Monthly Charges         0
+Total Charges          11
+Churn Label             0
+Churn Value             0
+Score                   0
+CLTV                    0
+Churn Reason         5174
+dtype: int64
