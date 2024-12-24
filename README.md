@@ -46,5 +46,4 @@ Ensure you have the following installed on your system:
 ### Setup
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/telco-customer-churn.git
-   cd telco-customer-churn
+   git clone https://github.com/AnaghaDhekne/Ensemble-Methods-TelcoCustomerChurnPrediction.git
